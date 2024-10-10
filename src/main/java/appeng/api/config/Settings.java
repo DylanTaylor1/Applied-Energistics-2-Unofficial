@@ -78,6 +78,8 @@ public enum Settings {
 
     LOCK_CRAFTING_MODE(EnumSet.allOf(LockCraftingMode.class)),
 
+    INSERTER_MODE(EnumSet.allOf(InserterMode.class)),
+
     PRIORITY_CARD_MODE(EnumSet.allOf(PriorityCardMode.class)),
 
     TERMINAL_FONT_SIZE(EnumSet.allOf(TerminalFontSize.class));

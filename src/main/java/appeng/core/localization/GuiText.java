@@ -214,6 +214,11 @@ public enum GuiText {
     // oredictionary filter GUI label
     OreFilterLabel,
 
+    Inserter,
+    InserterTooltip,
+    InserterTooltipModeInsert,
+    InserterTooltipModeExtract,
+
     PriorityCard,
     PriorityCardTooltip,
     PriorityCardTooltipModeEdit,

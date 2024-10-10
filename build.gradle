@@ -1,4 +1,4 @@
-//version: 1707058017
+//version: blah
 
 plugins {
     id 'com.gtnewhorizons.gtnhconvention'

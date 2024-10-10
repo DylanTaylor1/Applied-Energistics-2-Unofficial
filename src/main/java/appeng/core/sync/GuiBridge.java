@@ -74,6 +74,7 @@ import appeng.container.implementations.ContainerPatternMulti;
 import appeng.container.implementations.ContainerPatternTerm;
 import appeng.container.implementations.ContainerPatternTermEx;
 import appeng.container.implementations.ContainerPatternValueAmount;
+import appeng.container.implementations.ContainerInserter;
 import appeng.container.implementations.ContainerPriority;
 import appeng.container.implementations.ContainerPriorityCard;
 import appeng.container.implementations.ContainerQNB;
@@ -93,6 +94,7 @@ import appeng.helpers.IInterfaceHost;
 import appeng.helpers.IOreFilterable;
 import appeng.helpers.IPriorityHost;
 import appeng.helpers.WirelessTerminalGuiObject;
+import appeng.items.contents.InserterObject;
 import appeng.items.contents.PriorityCardObject;
 import appeng.items.contents.QuartzKnifeObj;
 import appeng.parts.automation.PartFormationPlane;
@@ -148,6 +150,8 @@ public enum GuiBridge implements IGuiHandler {
     GUI_NETWORK_TOOL(ContainerNetworkTool.class, INetworkTool.class, GuiHostType.ITEM, null),
 
     GUI_ADVANCED_NETWORK_TOOL(ContainerAdvancedNetworkTool.class, INetworkTool.class, GuiHostType.ITEM, null),
+
+    GUI_INSERTER(ContainerInserter.class, InserterObject.class, GuiHostType.ITEM, null),
 
     GUI_PRIORITY_CARD(ContainerPriorityCard.class, PriorityCardObject.class, GuiHostType.ITEM, null),
 

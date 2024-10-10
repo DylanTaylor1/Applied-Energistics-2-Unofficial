@@ -32,6 +32,7 @@ import appeng.items.storage.ItemViewCell;
 import appeng.items.storage.ItemVoidStorageCell;
 import appeng.items.tools.ToolAdvancedNetworkTool;
 import appeng.items.tools.ToolBiometricCard;
+import appeng.items.tools.ToolInserter;
 import appeng.items.tools.ToolMemoryCard;
 import appeng.items.tools.ToolNetworkTool;
 import appeng.items.tools.ToolPriorityCard;
@@ -78,6 +79,7 @@ public final class ApiItems implements IItems {
     private final IItemDefinition memoryCard;
     private final IItemDefinition networkTool;
     private final IItemDefinition advancedNetworkTool;
+    private final IItemDefinition inserter;
     private final IItemDefinition priorityCard;
     private final IItemDefinition portableCell;
 
@@ -146,6 +148,7 @@ public final class ApiItems implements IItems {
         this.memoryCard = constructor.registerItemDefinition(new ToolMemoryCard());
         this.networkTool = constructor.registerItemDefinition(new ToolNetworkTool());
         this.advancedNetworkTool = constructor.registerItemDefinition(new ToolAdvancedNetworkTool());
+        this.inserter = constructor.registerItemDefinition(new ToolInserter());
         this.priorityCard = constructor.registerItemDefinition(new ToolPriorityCard());
         this.portableCell = constructor.registerItemDefinition(new ToolPortableCell());
 
@@ -303,6 +306,11 @@ public final class ApiItems implements IItems {
     @Override
     public IItemDefinition advancedNetworkTool() {
         return this.advancedNetworkTool;
+    }
+
+    @Override
+    public IItemDefinition inserter() {
+        return this.inserter;
     }
 
     @Override

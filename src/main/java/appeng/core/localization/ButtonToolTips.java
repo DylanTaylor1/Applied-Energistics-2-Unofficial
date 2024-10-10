@@ -207,6 +207,10 @@ public enum ButtonToolTips {
     SwitchBytesInfo_Fluid,
     SwitchBytesInfo_Essentia,
 
+    InserterMode,
+    InserterMode_Insert,
+    InserterMode_Extract,
+
     PriorityCardMode,
     PriorityCardMode_Edit,
     PriorityCardMode_View,
