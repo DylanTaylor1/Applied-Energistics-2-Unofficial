@@ -14,11 +14,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.util.StatCollector;
-
 import org.lwjgl.opengl.GL11;
 
 import appeng.api.config.AccessRestriction;
@@ -31,6 +26,7 @@ import appeng.api.config.CraftingSortOrder;
 import appeng.api.config.CraftingStatus;
 import appeng.api.config.FullnessMode;
 import appeng.api.config.FuzzyMode;
+import appeng.api.config.InserterMode;
 import appeng.api.config.InsertionMode;
 import appeng.api.config.ItemSubstitution;
 import appeng.api.config.LevelType;
@@ -39,7 +35,6 @@ import appeng.api.config.OperationMode;
 import appeng.api.config.PatternBeSubstitution;
 import appeng.api.config.PatternSlotConfig;
 import appeng.api.config.PowerUnits;
-import appeng.api.config.InserterMode;
 import appeng.api.config.PriorityCardMode;
 import appeng.api.config.RedstoneMode;
 import appeng.api.config.RelativeDirection;
@@ -50,6 +45,7 @@ import appeng.api.config.SidelessMode;
 import appeng.api.config.SortDir;
 import appeng.api.config.SortOrder;
 import appeng.api.config.StorageFilter;
+import appeng.api.config.StringOrder;
 import appeng.api.config.TerminalStyle;
 import appeng.api.config.TypeFilter;
 import appeng.api.config.ViewItems;
@@ -58,6 +54,10 @@ import appeng.client.texture.ExtraBlockTextures;
 import appeng.core.localization.ButtonToolTips;
 import appeng.core.localization.GuiText;
 import appeng.util.Platform;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.util.StatCollector;
 
 public class GuiImgButton extends GuiButton implements ITooltip {
 
@@ -783,6 +783,20 @@ public class GuiImgButton extends GuiButton implements ITooltip {
                     InserterMode.EXTRACT,
                     ButtonToolTips.InserterMode,
                     ButtonToolTips.InserterMode_Extract);
+
+            this.registerApp(
+                    64,
+                    Settings.INTERFACE_TERMINAL_SECTION_ORDER,
+                    StringOrder.NATURAL,
+                    ButtonToolTips.StringOrder,
+                    ButtonToolTips.StringOrderNatural);
+            this.registerApp(
+                    16,
+                    Settings.INTERFACE_TERMINAL_SECTION_ORDER,
+                    StringOrder.ALPHANUM,
+                    ButtonToolTips.StringOrder,
+                    ButtonToolTips.StringOrderAlphanum);
+
         }
     }
 
